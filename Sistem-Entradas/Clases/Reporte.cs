@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistem_Entradas.Clases
 {
-    internal class Reporte
-    {
-        private class Reportes
+        public class Reporte
         {
 
             public List<Venta> ObtenerVentasPorFechas(DateTime desde, DateTime hasta)
@@ -22,5 +20,5 @@ namespace Sistem_Entradas.Clases
             }
 
         }
-    }
 }
+

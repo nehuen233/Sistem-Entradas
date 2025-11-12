@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Sistem_Entradas.Clases
 {
-    internal class Vendedor : Usuarios
+    public class Vendedor : Usuario
     {
         public Vendedor(int id, string Nombre, string Rol, string Contraseña) : base(id, Nombre, Rol, Contraseña)
         {
             Rol = "Vendedor";
         }
 
-        public RegistrarVenta(Venta v)
+        public void RegistrarVenta(Venta v)
         {
 
         }

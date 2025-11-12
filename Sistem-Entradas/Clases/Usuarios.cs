@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistem_Entradas.Clases
 {
-    internal class Usuarios
-    {
-        private class Usuario
+        public class Usuario
         {
             public int Id { get; set; }
             public string Nombre { get; set; }
@@ -34,6 +32,5 @@ namespace Sistem_Entradas.Clases
 
             }
         }
-
-    }
 }
+

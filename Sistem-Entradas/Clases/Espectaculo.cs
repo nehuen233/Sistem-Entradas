@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistem_Entradas.Clases
 {
-    internal class Espectaculo
-    {
-        private class Shows
+        public class Espectaculo
         {
             public int id { get; set; }
             public string Nombre { get; set; }
@@ -17,7 +15,7 @@ namespace Sistem_Entradas.Clases
             public string Foto { get; set; }
             List<Ubicacion> Ubicaciones;
 
-            public Shows(int id, string Nombre, int CapacidadTotal, double PrecioBase, string Foto)
+            public Espectaculo(int id, string Nombre, int CapacidadTotal, double PrecioBase, string Foto)
             {
                 this.id = id;
                 this.Nombre = Nombre;
@@ -41,5 +39,5 @@ namespace Sistem_Entradas.Clases
                 return 0;
             }
         }
-    }
 }
+

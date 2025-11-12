@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistem_Entradas.Clases
 {
-    internal class Administrador : Usuarios
+    public class Administrador : Usuario
     {
         public Administrador(int id, string Nombre, string Rol, string Contraseña) : base(id, Nombre, Rol, Contraseña)
         {
