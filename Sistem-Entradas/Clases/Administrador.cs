@@ -14,18 +14,19 @@ namespace Sistem_Entradas.Clases
         }
         public void CrearEspectaculo(Espectaculo es)
         {
-
+            // Enviar a la capa de datos para guardar en MySQL
+            EspectaculoDatos.GuardarEspectaculo(es);
         }
 
         public void CrearUbicacion(Espectaculo es, Ubicacion ub)
         {
-
+            UbicacionDatos.GuardarUbicacion(es.id, ub);
         }
 
         public void VerReporte(DateTime desde, DateTime hasta)
         {
 
-
+            // Más adelante se usará la clase Reporte
         }
     }
 }

@@ -16,5 +16,10 @@ namespace Sistem_Entradas.Formularios
         {
             InitializeComponent();
         }
+
+        private void FormAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -26,17 +26,22 @@ namespace Sistem_Entradas.Clases
             }
             public void AgregarUbicacion(Ubicacion u)
             {
-
+                Ubicaciones.Add(u);
             }
 
             public bool VerificarCapacidad(int cantidad)
             {
-                return false;
+                return cantidad <= ObtenerCapacidadDisponible();
             }
 
             public int ObtenerCapacidadDisponible()
             {
-                return 0;
+                int vendidas = 0;
+                foreach (var u in Ubicaciones)
+                {
+                    vendidas += u.EntradasVendidas;
+                }
+                return CapacidadTotal - vendidas;
             }
         }
 }

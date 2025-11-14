@@ -15,13 +15,20 @@ namespace Sistem_Entradas.Clases
 
         public void RegistrarVenta(Venta v)
         {
-
+            if (v.ValidarCapacidad())
+            {
+                VentaDatos.GuardarVenta(v);
+                v.Ubicacion.RegistrarVenta(v.Cantidad);
+            }
+            else
+            {
+                throw new Exception("No hay suficiente capacidad disponible.");
+            }
         }
 
         public bool VerificarDisponibilidad(Ubicacion u, int cantidad)
         {
-
-            return false;
+            return u.HayDisponibilidad(cantidad);
         }
     }
 }

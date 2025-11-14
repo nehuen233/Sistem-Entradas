@@ -53,6 +53,8 @@
     <Compile Include="Clases\Vendedor.cs" />
     <Compile Include="Clases\Venta.cs" />
     <Compile Include="Datos\Conexion.cs" />
+    <Compile Include="Datos\EspectaculoDatos.cs" />
+    <Compile Include="Datos\VentasDatos.cs" />
     <Compile Include="Formularios\FormAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +91,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Formularios\FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
