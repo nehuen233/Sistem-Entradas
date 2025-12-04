@@ -1,15 +1,44 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Data.SqlClient;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Sistem_Entradas.Datos
 {
-    public static class ConexionBD
+    class Conexion
     {
-        private static string cadena = "Server=localhost;Database=sistem_entradas;Uid=root;Pwd=;";
+        MySqlConnection conexion = new MySqlConnection();
+        static string servidor = "localhost";
+        static string bd = "sistema_entradas";
+        static string usuario = "root";
+        static string password = "";
+        static string puerto = "3306";
+        string cadenaConexion =
+                        "server=" + servidor +
+                        ";database=" + bd +
+                        ";user=" + usuario +
+                        ";password=" + password +
+                        ";port=" + puerto + ";";
 
-        public static MySqlConnection ObtenerConexion()
+
+        public MySqlConnection establecerConexion()
         {
-            return new MySqlConnection(cadena);
+            try
+            {
+                conexion.ConnectionString = cadenaConexion;
+                conexion.Open();
+                MessageBox.Show("Se Conecto a la BD Correctamente");
+            }
+
+            catch (MySqlException e)
+            {
+                MessageBox.Show("No se Conecto Correctamente a la BD" + e.ToString());
+            }
+
+            return conexion;
         }
+
+
+
     }
 }
 
