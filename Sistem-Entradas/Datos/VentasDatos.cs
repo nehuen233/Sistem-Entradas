@@ -7,7 +7,9 @@ namespace Sistem_Entradas.Datos
     {
         public static void GuardarVenta(Venta v)
         {
-            using (var conexion = ConexionBD.ObtenerConexion())
+            ConexionBD db = new ConexionBD();
+            using (var conexion = db.ObtenerConexion())
+
             {
                 conexion.Open();
                 string query = "INSERT INTO ventas (Fecha, IdEspectaculo, IdUbicacion, IdVendedor, Cantidad, Total) " +

@@ -49,6 +49,7 @@
             this.Controls.Add(this.button1);
             this.Name = "FormConexion";
             this.Text = "FormConexion";
+            this.Load += new System.EventHandler(this.FormConexion_Load);
             this.ResumeLayout(false);
 
         }

@@ -98,11 +98,12 @@
     <Compile Include="Clases\Espectaculo.cs" />
     <Compile Include="Clases\Reporte.cs" />
     <Compile Include="Clases\Ubicacion.cs" />
-    <Compile Include="Clases\Usuarios.cs" />
+    <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Vendedor.cs" />
     <Compile Include="Clases\Venta.cs" />
     <Compile Include="Datos\Conexion.cs" />
     <Compile Include="Datos\EspectaculoDatos.cs" />
+    <Compile Include="Datos\UbicacionDatos.cs" />
     <Compile Include="Datos\VentasDatos.cs" />
     <Compile Include="Formularios\FormAdmin.cs">
       <SubType>Form</SubType>

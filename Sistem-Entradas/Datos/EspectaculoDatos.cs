@@ -7,7 +7,9 @@ namespace Sistem_Entradas.Datos
     {
         public static void GuardarEspectaculo(Espectaculo e)
         {
-            using (var conexion = ConexionBD.ObtenerConexion())
+            ConexionBD db = new ConexionBD();
+            using (var conexion = db.ObtenerConexion())
+
             {
                 conexion.Open();
                 string query = "INSERT INTO espectaculos (Nombre, CapacidadTotal, PrecioBase, Foto) VALUES (@n, @c, @p, @f)";

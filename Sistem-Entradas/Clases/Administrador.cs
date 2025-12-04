@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sistem_Entradas.Datos;
 
 namespace Sistem_Entradas.Clases
 {
@@ -20,7 +21,7 @@ namespace Sistem_Entradas.Clases
 
         public void CrearUbicacion(Espectaculo es, Ubicacion ub)
         {
-            UbicacionDatos.GuardarUbicacion(es.id, ub);
+           // UbicacionDatos.GuardarUbicacion(es.id, ub);
         }
 
         public void VerReporte(DateTime desde, DateTime hasta)

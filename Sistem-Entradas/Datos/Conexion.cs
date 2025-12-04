@@ -4,7 +4,7 @@ using MySql.Data.MySqlClient;
 
 namespace Sistem_Entradas.Datos
 {
-    class Conexion
+    class ConexionBD
     {
         MySqlConnection conexion = new MySqlConnection();
         static string servidor = "localhost";
@@ -20,7 +20,7 @@ namespace Sistem_Entradas.Datos
                         ";port=" + puerto + ";";
 
 
-        public MySqlConnection establecerConexion()
+        public MySqlConnection ObtenerConexion()
         {
             try
             {

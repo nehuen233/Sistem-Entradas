@@ -8,7 +8,8 @@ namespace Sistem_Entradas.Clases
 {
         public class Usuario
         {
-            public int Id { get; set; }
+
+            public int id { get; set; }
             public string Nombre { get; set; }
             public string Rol { get; set; } //administrador, vendedor
             public string Contraseña { get; set; } //Contraseña Usuario
@@ -16,15 +17,10 @@ namespace Sistem_Entradas.Clases
 
             public Usuario(int id, string Nombre, string Rol, string Contraseña)
             {
-                this.Id = id;
+                this.id = id;
                 this.Nombre = Nombre;
                 this.Rol = Rol;
                 this.Contraseña = Contraseña;
-            }
-
-            public bool IniciarSesion(string nombre, string contraseña)
-            {
-                return false;
             }
 
             public void CerrarSesion()
